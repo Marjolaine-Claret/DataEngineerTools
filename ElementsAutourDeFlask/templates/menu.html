@@ -1,0 +1,19 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+    $('#selectmenu').on('change', function() {
+      location.href =  '/success/'+ $( "#selectmenu option:selected" ).text()
+        // this.value ;
+    });
+})
+
+</script>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.lang }} 
+
+</form>    
